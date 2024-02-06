@@ -3,6 +3,7 @@
 A new Flutter project.
 
 ## Getting Started
+![Screenshot 2024-01-18 113422](https://github.com/Lucky-Jotangiya/Global_Mall/assets/159091905/a7d6677e-f982-45b7-9a7a-003446e9836d)
 
 This project is a starting point for a Flutter application.
 
