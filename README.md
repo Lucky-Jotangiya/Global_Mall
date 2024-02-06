@@ -1,4 +1,4 @@
-# final_ecommerce
+# Global_Mall
 
 A new Flutter project.
 
