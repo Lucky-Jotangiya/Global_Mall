@@ -1,7 +1,7 @@
 class Data{
   static List productList = [
         {
-          "id": 1,
+          "id": 0,
           "title": "iPhone 9",
           "description": "An apple mobile which is nothing like apple",
           "price": 549,
@@ -20,7 +20,7 @@ class Data{
           ]
         },
         {
-          "id": 2,
+          "id": 1,
           "title": "iPhone X",
           "description": "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
           "price": 899,
@@ -38,7 +38,7 @@ class Data{
           ]
         },
         {
-          "id": 3,
+          "id": 2,
           "title": "Samsung Universe 9",
           "description": "Samsung's new variant which goes beyond Galaxy to the Universe",
           "price": 1249,
@@ -53,7 +53,7 @@ class Data{
           ]
         },
         {
-          "id": 4,
+          "id": 3,
           "title": "OPPOF19",
           "description": "OPPO F19 is officially announced on April 2021.",
           "price": 280,
@@ -72,7 +72,7 @@ class Data{
           ]
         },
         {
-          "id": 5,
+          "id": 4,
           "title": "Huawei P30",
           "description": "Huawei’s re-badged P30 Pro New Edition was officially unveiled yesterday in Germany and now the device has made its way to the UK.",
           "price": 499,
@@ -89,7 +89,7 @@ class Data{
           ]
         },
         {
-          "id": 6,
+          "id": 5,
           "title": "MacBook Pro",
           "description": "MacBook Pro 2021 with mini-LED display may launch between September, November",
           "price": 1749,
@@ -107,7 +107,7 @@ class Data{
           ]
         },
         {
-          "id": 7,
+          "id": 6,
           "title": "Samsung Galaxy Book",
           "description": "Samsung Galaxy Book S (2020) Laptop With Intel Lakefield Chip, 8GB of RAM Launched",
           "price": 1499,
@@ -125,7 +125,7 @@ class Data{
           ]
         },
         {
-          "id": 8,
+          "id": 7,
           "title": "Microsoft Surface Laptop 4",
           "description": "Style and speed. Stand out on HD video calls backed by Studio Mics. Capture ideas on the vibrant touchscreen.",
           "price": 1499,
@@ -144,7 +144,7 @@ class Data{
           ]
         },
         {
-          "id": 9,
+          "id": 8,
           "title": "Infinix INBOOK",
           "description": "Infinix Inbook X1 Ci3 10th 8GB 256GB 14 Win10 Grey – 1 Year Warranty",
           "price": 1099,
@@ -163,7 +163,7 @@ class Data{
           ]
         },
         {
-          "id": 10,
+          "id": 9,
           "title": "HP Pavilion 15-DK1056WM",
           "description": "HP Pavilion 15-DK1056WM Gaming Laptop 10th Gen Core i5, 8GB, 256GB SSD, GTX 1650 4GB, Windows 10",
           "price": 1099,
@@ -181,7 +181,7 @@ class Data{
           ]
         },
         {
-          "id": 11,
+          "id": 10,
           "title": "perfume Oil",
           "description": "Mega Discount, Impression of Acqua Di Gio by GiorgioArmani concentrated attar perfume Oil",
           "price": 13,
@@ -199,7 +199,7 @@ class Data{
           ]
         },
         {
-          "id": 12,
+          "id": 11,
           "title": "Brown Perfume",
           "description": "Royal_Mirage Sport Brown Perfume for Men & Women - 120ml",
           "price": 40,
@@ -218,7 +218,7 @@ class Data{
           ]
         },
         {
-          "id": 13,
+          "id": 12,
           "title": "Fog Scent Xpressio Perfume",
           "description": "Product details of Best Fog Scent Xpressio Perfume 100ml For Men cool long lasting perfumes for Men",
           "price": 13,
@@ -237,7 +237,7 @@ class Data{
           ]
         },
         {
-          "id": 14,
+          "id": 13,
           "title": "Non-Alcoholic Concentrated Perfume Oil",
           "description": "Original Al Munakh® by Mahal Al Musk | Our Impression of Climate | 6ml Non-Alcoholic Concentrated Perfume Oil",
           "price": 120,
@@ -255,7 +255,7 @@ class Data{
           ]
         },
         {
-          "id": 15,
+          "id": 14,
           "title": "Eau De Perfume Spray",
           "description": "Genuine  Al-Rehab spray perfume from UAE/Saudi Arabia/Yemen High Quality",
           "price": 30,
@@ -274,7 +274,7 @@ class Data{
           ]
         },
         {
-          "id": 16,
+          "id": 15,
           "title": "Hyaluronic Acid Serum",
           "description": "L'OrÃ©al Paris introduces Hyaluron Expert Replumping Serum formulated with 1.5% Hyaluronic Acid",
           "price": 19,
@@ -293,7 +293,7 @@ class Data{
           ]
         },
         {
-          "id": 17,
+          "id": 16,
           "title": "Tree Oil 30ml",
           "description": "Tea tree oil contains a number of compounds, including terpinen-4-ol, that have been shown to kill certain bacteria,",
           "price": 12,
@@ -311,7 +311,7 @@ class Data{
           ]
         },
         {
-          "id": 18,
+          "id": 17,
           "title": "Oil Free Moisturizer 100ml",
           "description": "Dermive Oil Free Moisturizer with SPF 20 is specifically formulated with ceramides, hyaluronic acid & sunscreen.",
           "price": 40,
@@ -330,7 +330,7 @@ class Data{
           ]
         },
         {
-          "id": 19,
+          "id": 18,
           "title": "Skin Beauty Serum.",
           "description": "Product name: rorec collagen hyaluronic acid white face serum riceNet weight: 15 m",
           "price": 46,
@@ -348,7 +348,7 @@ class Data{
           ]
         },
         {
-          "id": 20,
+          "id": 19,
           "title": "Freckle Treatment Cream- 15gm",
           "description": "Fair & Clear is Pakistan's only pure Freckle cream which helpsfade Freckles, Darkspots and pigments. Mercury level is 0%, so there are no side effects.",
           "price": 70,
@@ -367,7 +367,7 @@ class Data{
           ]
         },
         {
-          "id": 21,
+          "id": 20,
           "title": "- Daal Masoor 500 grams",
           "description": "Fine quality Branded Product Keep in a cool and dry place",
           "price": 20,
@@ -384,7 +384,7 @@ class Data{
           ]
         },
         {
-          "id": 22,
+          "id": 21,
           "title": "Elbow Macaroni - 400 gm",
           "description": "Product details of Bake Parlor Big Elbow Macaroni - 400 gm",
           "price": 14,
@@ -401,7 +401,7 @@ class Data{
           ]
         },
         {
-          "id": 23,
+          "id": 22,
           "title": "Orange Essence Food Flavou",
           "description": "Specifications of Orange Essence Food Flavour For Cakes and Baking Food Item",
           "price": 14,
@@ -420,7 +420,7 @@ class Data{
           ]
         },
         {
-          "id": 24,
+          "id": 23,
           "title": "cereals muesli fruit nuts",
           "description": "original fauji cereal muesli 250gm box pack original fauji cereals muesli fruit nuts flakes breakfast cereal break fast faujicereals cerels cerel foji fouji",
           "price": 46,
@@ -439,7 +439,7 @@ class Data{
           ]
         },
         {
-          "id": 25,
+          "id": 24,
           "title": "Gulab Powder 50 Gram",
           "description": "Dry Rose Flower Powder Gulab Powder 50 Gram • Treats Wounds",
           "price": 70,
@@ -458,7 +458,7 @@ class Data{
           ]
         },
         {
-          "id": 26,
+          "id": 25,
           "title": "Plant Hanger For Home",
           "description": "Boho Decor Plant Hanger For Home Wall Decoration Macrame Wall Hanging Shelf",
           "price": 41,
@@ -478,7 +478,7 @@ class Data{
           ]
         },
         {
-          "id": 27,
+          "id": 26,
           "title": "Flying Wooden Bird",
           "description": "Package Include 6 Birds with Adhesive Tape Shape: 3D Shaped Wooden Birds Material: Wooden MDF, Laminated 3.5mm",
           "price": 51,
@@ -497,7 +497,7 @@ class Data{
           ]
         },
         {
-          "id": 28,
+          "id": 27,
           "title": "3D Embellishment Art Lamp",
           "description": "3D led lamp sticker Wall sticker 3d wall art light on/off button  cell operated (included)",
           "price": 20,
@@ -516,7 +516,7 @@ class Data{
           ]
         },
         {
-          "id": 29,
+          "id": 28,
           "title": "Handcraft Chinese style",
           "description": "Handcraft Chinese style art luxury palace hotel villa mansion home decor ceramic vase with brass fruit plate",
           "price": 60,
@@ -535,7 +535,7 @@ class Data{
           ]
         },
         {
-          "id": 30,
+          "id": 29,
           "title": "Key Holder",
           "description": "Attractive DesignMetallic materialFour key hooksReliable & DurablePremium Quality",
           "price": 30,
@@ -553,7 +553,7 @@ class Data{
           ]
         },
     {
-      "id": 31,
+      "id": 30,
       "title": "EINSTEIN BOX",
       "description": "Einstein Box Ultimate Science Kit for Boys and Girls Ages 6-8-12-14| Birthday Gifts Ideas for Boys & Girls | STEM Learning Toys for 6,7,8,9,10,11,12,13,14 Year Old Kids",
       "price": 664,
@@ -571,7 +571,7 @@ class Data{
       ]
     },
     {
-      "id": 32,
+      "id": 31,
       "title": "iPhone 15 Pro (256 GB) - Natural Titanium",
       "description": "FORGED IN TITANIUM — iPhone 15 Pro has a strong and light aerospace-grade titanium design with a textured matte-glass back. It also features a Ceramic Shield front that’s tougher than any smartphone glass. And it’s splash, water, and dust resistant.",
       "price": 140990,
@@ -589,7 +589,7 @@ class Data{
       ]
     },
     {
-      "id": 33,
+      "id": 32,
       "title": "Stop Overthinking",
       "description": "Stop Overthinking is a book that understands the exhausting situation you've put yourself in, and how you lose your mind with anxiety and stress. It will walk you through detailed and proven techniques to help rewire your brain, control your thoughts, and change your mental habits.",
       "price": 156,
@@ -607,7 +607,7 @@ class Data{
       ]
     },
     {
-      "id": 34,
+      "id": 33,
       "title": "Boys Full Sleeve Floral Shirt ",
       "description": """ 
 Material composition : 100% Cotton
@@ -631,7 +631,7 @@ Country of Origin : India""",
       ]
     },
     {
-      "id": 35,
+      "id": 34,
       "title": "Fire-Boltt Ninja Call Pro Plus",
       "description": """
 Model Name : Ninja Call Pro
@@ -657,7 +657,7 @@ This fashion smart watch will work on a single charge for about 8 days (without 
   ];
   static List toys = [
     {
-      "id": 31,
+      "id": 30,
       "title": "EINSTEIN BOX",
       "description": "Einstein Box Ultimate Science Kit for Boys and Girls Ages 6-8-12-14| Birthday Gifts Ideas for Boys & Girls | STEM Learning Toys for 6,7,8,9,10,11,12,13,14 Year Old Kids",
       "price": 664,
@@ -671,13 +671,13 @@ This fashion smart watch will work on a single charge for about 8 days (without 
         "https://m.media-amazon.com/images/I/71ToGt7HYlL._SX522_.jpg",
         "https://m.media-amazon.com/images/I/81w+8wnGc-L._SX522_.jpg",
         "https://m.media-amazon.com/images/I/81g+koEIr4L._SX522_.jpg",
-        "https://m.media-amazon.com/images/I/81GP8rTz5SL._SX522_.jpg"
+        "https://m.media-amazon.com/images/I/81GP8rTz5SL._SX522_.jpg",
       ]
     },
   ];
   static List mobile = [
     {
-      "id": 32,
+      "id": 31,
       "title": "iPhone 15 Pro (256 GB) - Natural Titanium",
       "description": "FORGED IN TITANIUM — iPhone 15 Pro has a strong and light aerospace-grade titanium design with a textured matte-glass back. It also features a Ceramic Shield front that’s tougher than any smartphone glass. And it’s splash, water, and dust resistant.",
       "price": 140990,
@@ -697,7 +697,7 @@ This fashion smart watch will work on a single charge for about 8 days (without 
   ];
   static List books = [
     {
-      "id": 33,
+      "id": 32,
       "title": "Stop Overthinking",
       "description": "Stop Overthinking is a book that understands the exhausting situation you've put yourself in, and how you lose your mind with anxiety and stress. It will walk you through detailed and proven techniques to help rewire your brain, control your thoughts, and change your mental habits.",
       "price": 156,
@@ -717,7 +717,7 @@ This fashion smart watch will work on a single charge for about 8 days (without 
   ];
   static List fashion = [
     {
-      "id": 34,
+      "id": 33,
       "title": "Boys Full Sleeve Floral Shirt ",
       "description": """ 
 Material composition : 100% Cotton
@@ -743,7 +743,7 @@ Country of Origin : India""",
   ];
   static List electronic = [
     {
-      "id": 35,
+      "id": 34,
       "title": "Fire-Boltt Ninja Call Pro Plus",
       "description": """
 Model Name : Ninja Call Pro
@@ -767,8 +767,5 @@ This fashion smart watch will work on a single charge for about 8 days (without 
       ]
     },
   ];
-
-
-  static List dummy = [];
 }
 

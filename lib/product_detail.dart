@@ -243,7 +243,7 @@ class _ProductDetailState extends State<ProductDetail> {
 
   Future<void> addToCartProcess() async {
 
-    String userId = Splash.pref.getString('user')??'user';
+    String userId = Splash.pref.getString('userid')??'userid';
 
      Map map = { 'userid' : userId };
 
@@ -255,10 +255,13 @@ class _ProductDetailState extends State<ProductDetail> {
     GetProductIds getProductIds = GetProductIds.fromJson(m3);
 
      if(getProductIds.productIds!.contains(widget.productId)){
+       print('yes');
        ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Already Added In Cart')));
-
      }
      else{
+       print(widget.productId);
+       print(getProductIds.productIds);
+
        String qty = qty1;
        String title = widget.title!;
        String brand = widget.brand!;

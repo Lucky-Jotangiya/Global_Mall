@@ -359,6 +359,8 @@ class _AddProductState extends State<AddProduct> {
                 ),
                 onPressed: () async {
 
+
+
                   setState(() {
                     showIndicator = true;
                   });
@@ -406,11 +408,8 @@ class _AddProductState extends State<AddProduct> {
                 print('hello');
                 var url = Uri.parse("https://swarming-sash.000webhostapp.com/php/addProduct.php");
                 var response = await http.post(url,body: map);
-
                 print(response.body);
-
                 ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Product Added !')));
-
                 Navigator.pushNamedAndRemoveUntil(context, '/goto', (route) => false);
               }
 

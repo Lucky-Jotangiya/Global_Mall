@@ -15,6 +15,7 @@ import 'login.dart';
 import 'main.dart';
 
 class HomePage extends StatefulWidget {
+  static List foundUser = [];
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -24,7 +25,6 @@ class _HomePageState extends State<HomePage> {
 
   String userId = '';
   MyAllProducts? myAllProducts;
-  List foundUser = [];
   List userDataS = [];
   bool showProgress = true;
   bool showAll = false;
@@ -42,6 +42,8 @@ class _HomePageState extends State<HomePage> {
   List thumbnail = [];
   List images = [];
   int totalLength = 0;
+  List<Map<String,dynamic>> combinedList = [];
+
 
   TextEditingController controller = TextEditingController();
   late PageController pageController;
@@ -72,22 +74,22 @@ class _HomePageState extends State<HomePage> {
       ),
     );
   }
-
   @override
   void initState() {
+    HomePage.foundUser.clear();
     // TODO: implement initState
     super.initState();
+    viewData();
 
     setState(() {
       userId = Splash.pref.getString('userid')??'user';
     });
-    viewData();
 
     print('method s legth ========== $totalLength');
     getProfileImage();
 
     pageController = PageController(initialPage: 0);
-    foundUser.addAll(Data.productList);
+    HomePage.foundUser.addAll(Data.productList);
     userDataS.addAll(Data.productList);
 
     Future.delayed(const Duration(seconds: 2),() {
@@ -96,7 +98,6 @@ class _HomePageState extends State<HomePage> {
       });
     },);
   }
-
   @override
   void dispose() {
     // TODO: implement dispose
@@ -106,7 +107,6 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-
     return SafeArea(
       child: Scaffold(
         key: scaffoldKey,
@@ -286,7 +286,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ))
         ),
-        body: showProgress ? const Center(child: CircularProgressIndicator()) : foundUser.isNotEmpty ? SingleChildScrollView(
+        body: showProgress ? const Center(child: CircularProgressIndicator()) : HomePage.foundUser.isNotEmpty ? SingleChildScrollView(
           scrollDirection: Axis.vertical,
           child: Column(
             children: [
@@ -495,17 +495,17 @@ class _HomePageState extends State<HomePage> {
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2,mainAxisExtent: 270,childAspectRatio: 12), itemBuilder: (context, index) {
                 return InkWell(
                   onTap: () {
-                    String productId = foundUser[index]['id'].toString();
-                    String title = foundUser[index]['title'].toString();
-                    String des = foundUser[index]['description'].toString();
-                    String price = foundUser[index]['price'].toString();
-                    String dis = foundUser[index]['discountPercentage'].toString();
-                    String rating = foundUser[index]['rating'].toString();
-                    String stock = foundUser[index]['stock'].toString();
-                    String brand = foundUser[index]['brand'].toString();
-                    String category = foundUser[index]['category'].toString();
-                    String thumbnail = foundUser[index]['thumbnail'].toString();
-                    List<String> images = foundUser[index]['images'];
+                    String productId = HomePage.foundUser[index]['id'].toString();
+                    String title = HomePage.foundUser[index]['title'].toString();
+                    String des = HomePage.foundUser[index]['description'].toString();
+                    String price = HomePage.foundUser[index]['price'].toString();
+                    String dis = HomePage.foundUser[index]['discountPercentage'].toString();
+                    String rating = HomePage.foundUser[index]['rating'].toString();
+                    String stock = HomePage.foundUser[index]['stock'].toString();
+                    String brand = HomePage.foundUser[index]['brand'].toString();
+                    String category = HomePage.foundUser[index]['category'].toString();
+                    String thumbnail = HomePage.foundUser[index]['thumbnail'].toString();
+                    List<String> images = HomePage.foundUser[index]['images'];
                     String userid = userId;
 
                     Navigator.push(context, MaterialPageRoute(builder: (context) {
@@ -528,7 +528,7 @@ class _HomePageState extends State<HomePage> {
                             width: double.infinity,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(5),
-                              image: DecorationImage(image: NetworkImage('${foundUser[index]['thumbnail']}'),filterQuality: FilterQuality.high,fit: BoxFit.cover),
+                              image: DecorationImage(image: NetworkImage('${HomePage.foundUser[index]['thumbnail']}'),filterQuality: FilterQuality.high,fit: BoxFit.cover),
                             ),
                           ),
                           const SizedBox(height: 5,),
@@ -541,11 +541,11 @@ class _HomePageState extends State<HomePage> {
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Text('${foundUser[index]['title']}',maxLines: 1,style: const TextStyle(fontSize: 16,fontWeight: FontWeight.bold),),
-                                  Text('${foundUser[index]['brand']}',style: TextStyle(fontSize: 12,color: Colors.pink.shade800),),
+                                  Text('${HomePage.foundUser[index]['title']}',maxLines: 1,style: const TextStyle(fontSize: 16,fontWeight: FontWeight.bold),),
+                                  Text('${HomePage.foundUser[index]['brand']}',style: TextStyle(fontSize: 12,color: Colors.pink.shade800),),
                                   Padding(
                                     padding: const EdgeInsets.only(right: 5),
-                                    child: Align(alignment: Alignment.bottomRight,child: Text('${foundUser[index]['price']} /-',style: const TextStyle(fontSize: 15,color: Colors.pink,fontWeight: FontWeight.bold),)),
+                                    child: Align(alignment: Alignment.bottomRight,child: Text('${HomePage.foundUser[index]['price']} /-',style: const TextStyle(fontSize: 15,color: Colors.pink,fontWeight: FontWeight.bold),)),
                                   )
                                 ],
                               ),
@@ -557,7 +557,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 );
               },
-                itemCount: foundUser.length,
+                itemCount: HomePage.foundUser.length,
               ),
             ],
           ),
@@ -581,7 +581,7 @@ class _HomePageState extends State<HomePage> {
     }
 
     setState(() {
-      foundUser = result;
+      HomePage.foundUser = result;
     });
   }
 
@@ -613,6 +613,39 @@ class _HomePageState extends State<HomePage> {
     var mm = jsonDecode(response.body);
     myAllProducts = MyAllProducts.fromJson(mm);
     print(response.body);
+
+    List<String> imgPath = [];
+
+    print('imgPath length == == == ${imgPath.length}');
+    print('imgPath length == == == ${imgPath}');
+    print('imgPath length == == == ${imgPath.runtimeType}');
+
+      for(int i=0; i<myAllProducts!.productdata!.length; i++){
+        imgPath = myAllProducts!.productdata![i].images!.map((e) => '$path$e').toList();
+        combinedList.add({
+          "id": myAllProducts!.productdata![i].id!,
+          "title": myAllProducts!.productdata![i].title!,
+          "description": myAllProducts!.productdata![i].description!,
+          "price": myAllProducts!.productdata![i].price!,
+          "discountPercentage": myAllProducts!.productdata![i].discountPercentage!,
+          "stock": myAllProducts!.productdata![i].discountPercentage!,
+          "brand": myAllProducts!.productdata![i].brand!,
+          "category": myAllProducts!.productdata![i].category!,
+          "thumbnail": '$path${myAllProducts!.productdata![i].thumbnail!}',
+          "images" : imgPath
+        });
+
+      }
+    setState(() {
+
+      print('founduser l before === ${HomePage.foundUser.length}');
+      HomePage.foundUser.addAll(combinedList);
+      print('founduser l after === ${HomePage.foundUser.length}');
+
+    });
+
+      print('combinedList =========== ============ ========= $combinedList');
+      print('combinedList =========== ============ ========= ${combinedList.length}');
 
   }
 }

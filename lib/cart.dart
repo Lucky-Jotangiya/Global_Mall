@@ -8,6 +8,8 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:razorpay_flutter/razorpay_flutter.dart';
 
+import 'homepage.dart';
+
 
 class Cart extends StatefulWidget {
 
@@ -129,16 +131,17 @@ class _CartState extends State<Cart> {
                           String? getDes = getData.mydata![index].productid;
                           int i = int.parse(getDes!);
                           print('product id ====== $i');
+                          print(HomePage.foundUser.length);
 
                           String? title = getData.mydata![index].title;
-                          String des = Data.productList[i-1]['description'].toString();
+                          String des = HomePage.foundUser[i]['description'].toString();
                           String? price = getData.mydata![index].price;
-                          String? dis = Data.productList[i-1]['discountPercentage'].toString();
-                          String? rating = Data.productList[i-1]['rating'].toString();
-                          String? stock = Data.productList[i-1]['stock'].toString();
+                          String? dis = HomePage.foundUser[i]['discountPercentage'].toString();
+                          String? rating = HomePage.foundUser[i]['rating'].toString();
+                          String? stock = HomePage.foundUser[i]['stock'].toString();
                           String? brand = getData.mydata![index].brand;
-                          String? category = Data.productList[i-1]['category'].toString();
-                          List<String>? images = Data.productList[i-1]['images'];
+                          String? category = HomePage.foundUser[i]['category'].toString();
+                          List<String>? images = HomePage.foundUser[i]['images'];
                           String? thumbnail = getData.mydata![index].thumbnail;
                           String? userid = getData.mydata![index].userid;
                           String? productId = getData.mydata![index].productid;
